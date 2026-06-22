@@ -1,0 +1,61 @@
+# ─── Environment & Secrets ─────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ─── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.so
+
+# ─── Virtual Environments ──────────────────────────────────────
+venv/
+env/
+.venv/
+ENV/
+
+# ─── Django ────────────────────────────────────────────────────
+db.sqlite3
+db.sqlite3-journal
+*.log
+media/
+staticfiles/
+static_root/
+
+# ─── Migrations (uncomment ONLY if you want to ignore them) ───
+# accounts/migrations/
+
+# ─── IDE & Editors ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# ─── OS Files ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Docker ────────────────────────────────────────────────────
+mysql_data/
+
+# ─── Coverage & Testing ───────────────────────────────────────
+htmlcov/
+.coverage
+.coverage.*
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+
+# ─── Distribution / Packaging ─────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg

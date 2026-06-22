@@ -1,0 +1,27 @@
+"""
+Custom authentication backend that uses email instead of username.
+"""
+from django.contrib.auth import get_user_model
+from django.contrib.auth.backends import ModelBackend
+
+User = get_user_model()
+
+
+class EmailBackend(ModelBackend):
+    """
+    Authenticate using email address instead of username.
+    """
+
+    def authenticate(self, request, email=None, password=None, **kwargs):
+        try:
+            user = User.objects.get(email=email)
+        except User.DoesNotExist:
+            # Run the default password hasher to prevent timing attacks.
+            # Without this, an attacker could determine if an email exists
+            # by measuring response time (no hash = faster response).
+            User().set_password(password)
+            return None
+
+        if user.check_password(password) and self.user_can_authenticate(user):
+            return user
+        return None
