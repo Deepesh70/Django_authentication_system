@@ -1,3 +1,10 @@
+<script setup>
+import { useToast } from '../composables/useToast'
+
+const { toasts, dismissToast } = useToast()
+</script>
+
+
 <template>
   <div class="toast-container">
     <div
@@ -14,8 +21,4 @@
   </div>
 </template>
 
-<script setup>
-import { useToast } from '../composables/useToast'
 
-const { toasts, dismissToast } = useToast()
-</script>

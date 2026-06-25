@@ -1,9 +1,3 @@
-<template>
-    <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Switch to light mode' : 'switch to Dark mode'">
-        {{isDark ? 'Day': 'night' }}
-    </button>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 
@@ -27,4 +21,13 @@ onMounted(() => {
     }
     applyTheme()
 })
-</script> 
+</script>
+
+
+<template>
+    <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Switch to light mode' : 'switch to Dark mode'">
+        {{isDark ? 'Day': 'night' }}
+    </button>
+</template>
+
+ 
