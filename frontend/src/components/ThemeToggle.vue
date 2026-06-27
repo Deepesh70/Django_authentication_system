@@ -26,7 +26,7 @@ onMounted(() => {
 
 <template>
     <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Switch to light mode' : 'switch to Dark mode'">
-        {{isDark ? 'Day': 'night' }}
+        {{isDark ? '🌞': '🌙' }}
     </button>
 </template>
 

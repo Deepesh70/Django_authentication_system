@@ -1421,7 +1421,7 @@ Pinia is Vue's official state manager (replaced Vuex in Vue 3). It's like React'
  * Defines routes and navigation guards for authentication.
  */
 import { createRouter, createWebHistory } from 'vue-router'
-import { useAuthStore } from '../stores/auth'
+import { useAuthStore } from '../stores/auths'
 
 // Lazy-loaded routes — components only load when the route is visited.
 // This reduces the initial bundle size (code splitting).
@@ -1664,7 +1664,7 @@ import AppToast from './components/AppToast.vue'
 <script setup>
 import { reactive, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { useAuthStore } from '../stores/auth'
+import { useAuthStore } from '../stores/auths'
 import ThemeToggle from '../components/ThemeToggle.vue'
 
 const router = useRouter()
@@ -1886,7 +1886,7 @@ async function handleLogin() {
 <script setup>
 import { reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { useAuthStore } from '../stores/auth'
+import { useAuthStore } from '../stores/auths'
 import ThemeToggle from '../components/ThemeToggle.vue'
 
 const router = useRouter()
@@ -2055,7 +2055,7 @@ async function handleRegister() {
 
 <script setup>
 import { ref } from 'vue'
-import { useAuthStore } from '../stores/auth'
+import { useAuthStore } from '../stores/auths'
 import ThemeToggle from '../components/ThemeToggle.vue'
 
 const authStore = useAuthStore()
@@ -2142,7 +2142,7 @@ async function handleSubmit() {
 <script setup>
 import { reactive, ref, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useAuthStore } from '../stores/auth'
+import { useAuthStore } from '../stores/auths'
 import ThemeToggle from '../components/ThemeToggle.vue'
 
 const route = useRoute()
@@ -2365,7 +2365,7 @@ onMounted(async () => {
 <script setup>
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import { useAuthStore } from '../stores/auth'
+import { useAuthStore } from '../stores/auths'
 import ThemeToggle from '../components/ThemeToggle.vue'
 
 const router = useRouter()
